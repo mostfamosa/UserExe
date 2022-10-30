@@ -1,60 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a3774e1-de84-4170-bfc6-ca96850416b7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/UserService.java" afterDir="false" />
-    </list>
+    <list default="true" id="b6466cc4-17d7-4949-8816-a7a0bec0b5a1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2Gqx50YeReaSNSaCQl7VcIaxy4V" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -68,44 +29,24 @@
       </list>
     </option>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="0a3774e1-de84-4170-bfc6-ca96850416b7" name="Changes" comment="" />
-      <created>1667129731149</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1667129731149</updated>
-    </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="584" y="200" key="#com.intellij.ide.util.MemberChooser" timestamp="1667136801271">
-      <screen x="0" y="25" width="1680" height="942" />
-    </state>
-    <state x="584" y="200" key="#com.intellij.ide.util.MemberChooser/0.25.1680.942@0.25.1680.942" timestamp="1667136801271" />
-    <state x="690" y="388" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1667132882128">
+    <state x="690" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1667140427545">
       <screen x="0" y="25" width="1680" height="940" />
     </state>
-    <state x="690" y="388" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.25.1680.940@0.25.1680.940" timestamp="1667132882128" />
-    <state x="328" y="73" key="SettingsEditor" timestamp="1667138576666">
+    <state x="690" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.25.1680.940@0.25.1680.940" timestamp="1667140427545" />
+    <state x="328" y="73" key="SettingsEditor" timestamp="1667140636264">
       <screen x="0" y="25" width="1680" height="940" />
     </state>
-    <state x="328" y="73" key="SettingsEditor/0.25.1680.940@0.25.1680.940" timestamp="1667138576666" />
-    <state x="517" y="324" key="com.intellij.ide.util.TipDialog" timestamp="1667132866512">
+    <state x="328" y="73" key="SettingsEditor/0.25.1680.940@0.25.1680.940" timestamp="1667140636264" />
+    <state x="554" y="392" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1667140631073">
       <screen x="0" y="25" width="1680" height="940" />
     </state>
-    <state x="517" y="324" key="com.intellij.ide.util.TipDialog/0.25.1680.940@0.25.1680.940" timestamp="1667132866512" />
-    <state x="554" y="392" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1667138570271">
-      <screen x="0" y="25" width="1680" height="940" />
-    </state>
-    <state x="554" y="392" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.25.1680.940@0.25.1680.940" timestamp="1667138570271" />
-    <state x="570" y="411" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1667133109788">
-      <screen x="0" y="25" width="1680" height="940" />
-    </state>
-    <state x="570" y="411" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.25.1680.940@0.25.1680.940" timestamp="1667133109788" />
+    <state x="554" y="392" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.25.1680.940@0.25.1680.940" timestamp="1667140631073" />
   </component>
 </project>
