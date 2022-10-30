@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6466cc4-17d7-4949-8816-a7a0bec0b5a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserApp/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserApp/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/Repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserApp/Repo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserApp/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserApp/UserService.java" afterDir="false" />
-    </list>
+    <list default="true" id="b6466cc4-17d7-4949-8816-a7a0bec0b5a1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
