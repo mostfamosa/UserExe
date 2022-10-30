@@ -1,4 +1,4 @@
-package UserApp;
+package app;
 
 import com.google.gson.Gson;
 

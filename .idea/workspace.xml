@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
@@ -91,4 +92,57 @@
       </map>
     </option>
   </component>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b6466cc4-17d7-4949-8816-a7a0bec0b5a1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="690" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1667140427545">
+      <screen x="0" y="25" width="1680" height="940" />
+    </state>
+    <state x="690" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.25.1680.940@0.25.1680.940" timestamp="1667140427545" />
+    <state x="328" y="73" key="SettingsEditor" timestamp="1667140636264">
+      <screen x="0" y="25" width="1680" height="940" />
+    </state>
+    <state x="328" y="73" key="SettingsEditor/0.25.1680.940@0.25.1680.940" timestamp="1667140636264" />
+    <state x="554" y="392" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1667140631073">
+      <screen x="0" y="25" width="1680" height="940" />
+    </state>
+    <state x="554" y="392" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.25.1680.940@0.25.1680.940" timestamp="1667140631073" />
+  </component>
+>>>>>>> main
 </project>

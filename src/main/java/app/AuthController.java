@@ -1,4 +1,4 @@
-package UserApp;
+package app;
 
 public class AuthController {
 
@@ -7,6 +7,7 @@ public class AuthController {
     private final AuthService authService;
     private AuthController()
     {
+
         authService=AuthService.getInstance();
     }
 
@@ -17,4 +18,5 @@ public class AuthController {
         }
         return authController;
     }
+
 }
