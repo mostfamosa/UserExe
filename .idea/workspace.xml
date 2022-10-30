@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6466cc4-17d7-4949-8816-a7a0bec0b5a1" name="Default Changelist" comment="" />
+    <list default="true" id="b6466cc4-17d7-4949-8816-a7a0bec0b5a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserApp/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserApp/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/Repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserApp/Repo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserApp/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserApp/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserApp/UserService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,19 +36,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
