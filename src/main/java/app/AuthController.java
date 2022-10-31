@@ -1,5 +1,7 @@
 package app;
 
+import com.google.gson.internal.Streams;
+
 public class AuthController {
 
     private static AuthController authController;
@@ -19,5 +21,8 @@ public class AuthController {
         return authController;
     }
 
+    public void createUser(String email, String name,String password){
+       authService.createUser(email,name,password);
+    }
 
 }
