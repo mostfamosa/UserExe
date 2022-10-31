@@ -19,7 +19,7 @@ public class AuthService {
     }
 
     // TODO
-    protected User createNewUser(String email, String name, String password){
+    protected User createUser(String email, String name, String password){
         if (emailExists(email)){
             throw new IllegalArgumentException("This email already exists");
         }

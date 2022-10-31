@@ -22,6 +22,9 @@ public class AuthController {
     }
 
     public void createUser(String email, String name,String password){
-       authService.createNewUser(email,name,password);
+        if(!ValidationController.validateNewUser(name,password,email)){
+            return;
+        }
+       authService.createUser(email,name,password);
     }
 }
