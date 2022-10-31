@@ -27,6 +27,7 @@ public class AuthService {
         }
         User user = new User(email, name, password);
         temp.put(user.getId(), user);
+        System.out.println("created user successfully");
         // write validation method to validate that the users repo does not contain a user with this email.
     }
 
