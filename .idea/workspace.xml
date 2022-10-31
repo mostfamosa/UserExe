@@ -1,18 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6466cc4-17d7-4949-8816-a7a0bec0b5a1" name="Default Changelist" comment="" />
+    <list default="true" id="b6466cc4-17d7-4949-8816-a7a0bec0b5a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Repo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Repo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2GtxII6uXmnPPZRH05QMu9QuuFU" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -33,6 +47,13 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6466cc4-17d7-4949-8816-a7a0bec0b5a1" name="Default Changelist" comment="" />
+      <created>1667221600434</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667221600434</updated>
+    </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
@@ -40,13 +61,25 @@
       <screen x="0" y="25" width="1680" height="940" />
     </state>
     <state x="690" y="402" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.25.1680.940@0.25.1680.940" timestamp="1667140427545" />
+    <state x="378" y="154" key="Maven.ArtifactSearchDialog" timestamp="1667222127333">
+      <screen x="0" y="25" width="1680" height="940" />
+    </state>
+    <state x="378" y="154" key="Maven.ArtifactSearchDialog/0.25.1680.940@0.25.1680.940" timestamp="1667222127333" />
     <state x="328" y="73" key="SettingsEditor" timestamp="1667140636264">
       <screen x="0" y="25" width="1680" height="940" />
     </state>
     <state x="328" y="73" key="SettingsEditor/0.25.1680.940@0.25.1680.940" timestamp="1667140636264" />
+    <state x="517" y="324" key="com.intellij.ide.util.TipDialog" timestamp="1667221703415">
+      <screen x="0" y="25" width="1680" height="940" />
+    </state>
+    <state x="517" y="324" key="com.intellij.ide.util.TipDialog/0.25.1680.940@0.25.1680.940" timestamp="1667221703415" />
     <state x="554" y="392" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1667140631073">
       <screen x="0" y="25" width="1680" height="940" />
     </state>
     <state x="554" y="392" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.25.1680.940@0.25.1680.940" timestamp="1667140631073" />
+    <state x="242" y="114" key="new project wizard" timestamp="1667201500744">
+      <screen x="0" y="25" width="1680" height="940" />
+    </state>
+    <state x="242" y="114" key="new project wizard/0.25.1680.940@0.25.1680.940" timestamp="1667201500744" />
   </component>
 </project>

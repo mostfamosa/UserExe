@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Repo {
-    private ArrayList<User> users = new ArrayList<>();
+    private ArrayList<User> users = new ArrayList<>(); //change to map <String, User>
     private Gson gson = new Gson();
     private String filepath = ".src/main/resources/Users.json";
 
@@ -24,5 +24,21 @@ public class Repo {
     private void loadUsers(){
 
     }
+
+    private void writeToFile(String filename, User content){
+
+    }
+
+    private User readFromFile(String fileName){
+        return null;
+    }
+
+    public void updateUser(User user){
+        //make sure user exists- if id does then update user, else throw exception
+    }
+
+
+
+
 
 }
