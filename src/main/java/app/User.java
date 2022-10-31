@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 class User {
 
     private final int id;
-    private static AtomicInteger idCounter = new AtomicInteger();
+    private static final AtomicInteger idCounter = new AtomicInteger();
     private  String email; //TODO: MAKE SURE THAT THE EMAIL IS UNIQUE
     private String name;
     private String password;

@@ -23,8 +23,7 @@ public class Repo {
         gson = new Gson();
     }
 
-    public static Repo getInstance()
-    {
+    public static Repo getInstance(){
         if (repo == null){
             repo = new Repo();
         }
