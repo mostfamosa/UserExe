@@ -1,4 +1,5 @@
 package app;
+import java.util.UUID;
 
 public class UserController {
     private static UserController userController;
@@ -17,4 +18,5 @@ public class UserController {
         }
         return userController;
     }
+
 }

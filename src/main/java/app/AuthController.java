@@ -2,6 +2,8 @@ package app;
 
 import com.google.gson.internal.Streams;
 
+import java.security.SecureRandom;
+
 public class AuthController {
 
     private static AuthController authController;
@@ -13,6 +15,7 @@ public class AuthController {
         authService=AuthService.getInstance();
     }
 
+
     public static AuthController getInstance()
     {
         if (authController == null){
@@ -23,6 +26,10 @@ public class AuthController {
 
     public void createUser(String email, String name,String password){
        authService.createUser(email,name,password);
+    }
+
+    public void login(String email, String password){
+
     }
 
 }
