@@ -1,17 +1,19 @@
 package app;
 
-public class AuthService {
+import java.util.HashMap;
+import java.util.Map;
 
+public class AuthService {
 
     private static AuthService authService;
     private final Repo repo;
-    private AuthService()
-    {
+    public HashMap<Integer,User> temp = new HashMap<>();
+
+    private AuthService() {
         repo =Repo.getInstance();
     }
 
-    public static AuthService getInstance()
-    {
+    public static AuthService getInstance() {
         if (authService == null){
             authService = new AuthService();
         }
@@ -19,19 +21,13 @@ public class AuthService {
     }
 
     // TODO
-    protected User createNewUser(String email, String name, String password){
-        if (emailExists(email)){
+    protected void createUser(String email, String name, String password){
+        if (ValidationController.emailExists(email,temp)){
             throw new IllegalArgumentException("This email already exists");
         }
-        return null;
+        User user = new User(email, name, password);
+        temp.put(user.getId(), user);
         // write validation method to validate that the users repo does not contain a user with this email.
-
     }
-
-    //TODO
-    private static boolean emailExists(String email) {
-        return false;
-    }
-
 
 }
