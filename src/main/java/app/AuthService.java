@@ -8,7 +8,6 @@ public class AuthService {
 
     private static AuthService authService;
     private final Repo repo;
-    public HashMap<Integer,User> temp = new HashMap<>();
     private final Map<UUID, User> tokens;
 
     private AuthService() {
@@ -23,18 +22,18 @@ public class AuthService {
         return authService;
     }
 
-    // TODO
-    protected boolean createUser(String email, String name, String password){
-        if (emailExists(email,temp)){
-            return false;
+
+    protected void createUser(String email, String name, String password){
+        if (emailExists(email)) {
+            System.out.println("This email already exists");
+        } else {
+            User user = new User(email, name, password);
+            repo.saveNewUser(user);
         }
-        User user = new User(email, name, password);
-        temp.put(user.getId(), user);
-        return true;
     }
 
-    protected boolean isLoggedIn(UUID token){
-        return tokens.containsKey(token);
+    protected User isLoggedIn(UUID token){
+        return tokens.get(token);
     }
 
     protected void login(String email, String password){
@@ -42,8 +41,8 @@ public class AuthService {
     }
 
     //edit this function
-    private static boolean emailExists(String email, HashMap<Integer, User> hm) {
-        return hm.values().stream().anyMatch(user -> user.getEmail().equals(email));
+    private boolean emailExists(String email) {
+        return repo.getUsers().values().stream().anyMatch(user -> user.getEmail().equals(email));
     }
 
 

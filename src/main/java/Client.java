@@ -10,6 +10,6 @@ public class Client {
         AuthController authController = AuthController.getInstance();
         AuthService authService = AuthService.getInstance();
         authController.createUser("mayabarkan@gmail.com", "maya", "mmmmM111");
-        System.out.println(authService.temp);
+        //System.out.println(authService.temp);
     }
 }
