@@ -6,8 +6,7 @@ public class UserService {
     private static UserService userService;
 
     private final Repo repo;
-    private UserService()
-    {
+    private UserService() {
         repo=Repo.getInstance();
     }
 
