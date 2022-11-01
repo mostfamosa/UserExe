@@ -1,23 +1,24 @@
 package app;
 
 import com.google.gson.Gson;
-
 import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Repo {
 
-
+    private File[] files;
     private static Repo repo;
-    private final Map<Integer, User> users = new HashMap<>();
+    private Map<Integer, User> users = new HashMap<>();
     private final Gson gson;
     private final String filepath;
-
 
     private Repo() {
         filepath = "src/main/resources/Users/";
         gson = new Gson();
+        files = new File("src/main/resources/Users/").listFiles();
+        users = loadAllUsers();
+
     }
 
     protected static Repo getInstance() {
@@ -38,16 +39,11 @@ public class Repo {
     protected boolean deleteUser(Integer id) {
         users.remove(id);
         File file = new File(filepath + id + ".json");
-        if (file.delete()) {
-            return true;
-        } else {
-            return false;
-        }
+        return file.delete();
     }
 
     protected void saveNewUser(User user) {
         writeToFile("" + user.getId() + ".json", user);
-
     }
 
     private void writeToFile(String filename, User content) {
@@ -57,14 +53,13 @@ public class Repo {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
-    //extra function
-    private Map<Integer, User> loadAllUsers() {
-
-        for (Map.Entry<Integer, User> entry : users.entrySet()) {
-            users.put(entry.getKey(), readFromFile(entry.getKey() + ".json"));
+    Map<Integer, User> loadAllUsers() {
+        for (File file : files) {
+            User u = readFromFile(file.getName());
+            assert u != null;
+            users.put(u.getId(), u);
         }
         return users;
     }
@@ -88,8 +83,6 @@ public class Repo {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
 }
