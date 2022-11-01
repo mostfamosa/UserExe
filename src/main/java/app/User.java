@@ -7,7 +7,7 @@ class User {
 
     private final int id;
     private static final AtomicInteger idCounter = new AtomicInteger();
-    private  String email; 
+    private  String email;
     private String name;
     private String password;
 
@@ -66,9 +66,5 @@ class User {
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 '}';
-    }
-
-    protected boolean emailPasswordMatch(String email, String password){
-        return this.getEmail().equals(email) && this.getPassword().equals(password);
     }
 }

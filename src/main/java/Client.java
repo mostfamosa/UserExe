@@ -9,7 +9,11 @@ public class Client {
     public static void main(String[] args) {
         AuthController authController = AuthController.getInstance();
         AuthService authService = AuthService.getInstance();
-        authController.createUser("mayabarkan@gmail.com", "maya", "mmmmM111");
-        //System.out.println(authService.temp);
+        authController.createUser("mayabarkan@gmail.com", "Maya", "mmmmM111");
+
+        authController.login("mayabarkan@gmail.com", "mmmmM111");
+        authController.login("kmxx@gmail.com","cdcd1234M");
+
+
     }
 }

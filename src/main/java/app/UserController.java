@@ -5,6 +5,7 @@ public class UserController {
     private static UserController userController;
     private final AuthService authService;
     private final UserService userService;
+
     private UserController()
     {
         authService=AuthService.getInstance();

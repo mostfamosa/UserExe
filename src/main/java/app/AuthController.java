@@ -31,7 +31,9 @@ public class AuthController {
     }
 
     public void login(String email, String password){
-        authService.login(email,password);
+        if (ValidationController.isValidEmail(email) && ValidationController.isValidPassword(password)){
+            authService.login(email,password);
+        }
     }
 
 }
