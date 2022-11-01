@@ -2,13 +2,14 @@ package app;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 
 public class AuthService {
 
     private static AuthService authService;
     private final Repo repo;
-    private final Map<UUID, User> tokens;
+    private final Map<UUID, Integer> tokens;
 
     private AuthService() {
         repo = Repo.getInstance();
@@ -22,26 +23,42 @@ public class AuthService {
         return authService;
     }
 
-
     protected void createUser(String email, String name, String password) {
         if (emailExists(email)) {
-            System.out.println("This email already exists");
+            System.out.println("Error: This email already exists");
         } else {
             User user = new User(email, name, password);
             repo.saveNewUser(user);
         }
     }
 
-    protected User isLoggedIn(UUID token) {
+    protected Integer isLoggedIn(UUID token){
+        if (tokens.get(token) == null){
+            System.out.println("Error: Invalid token");
+        }
+
         return tokens.get(token);
     }
 
-    protected void login(String email, String password) {
 
+    protected void login(String email, String password) {
+        Optional<User> user = validLoginCredentials(email, password);
+        if(user.isPresent()){
+            UUID token = UUID.randomUUID();
+            tokens.put(token , user.get().getId());
+            System.out.println(user.get() + " Is logged in ");
+        } else {
+            System.out.println("Error: No such registered user with this credentials");
+        }
     }
 
-    //edit this function
     private boolean emailExists(String email) {
         return repo.getUsers().values().stream().anyMatch(user -> user.getEmail().equals(email));
     }
+
+    private Optional<User> validLoginCredentials(String email, String password){
+        return repo.getUsers().values().stream().filter(user -> user.getEmail().equals(email) && user.getPassword().equals(password)).findFirst();
+    }
+
 }
+
