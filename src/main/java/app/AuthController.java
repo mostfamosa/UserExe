@@ -3,6 +3,7 @@ package app;
 import com.google.gson.internal.Streams;
 
 import java.security.SecureRandom;
+import java.util.UUID;
 
 public class AuthController {
 
@@ -30,7 +31,7 @@ public class AuthController {
         authService.createUser(email, name, password);
     }
 
-    public void login(String email, String password){
+    public UUID login(String email, String password){
         if (ValidationController.isValidEmail(email) && ValidationController.isValidPassword(password)){
             authService.login(email,password);
         }
