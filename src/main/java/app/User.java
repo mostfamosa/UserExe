@@ -7,7 +7,7 @@ class User {
 
     private final int id;
     private static final AtomicInteger idCounter = new AtomicInteger();
-    private  String email; //TODO: MAKE SURE THAT THE EMAIL IS UNIQUE
+    private  String email;
     private String name;
     private String password;
 
