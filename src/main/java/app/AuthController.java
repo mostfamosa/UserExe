@@ -30,8 +30,10 @@ public class AuthController {
         authService.createUser(email, name, password);
     }
 
-    public void login(String email, String password) {
-
+    public void login(String email, String password){
+        if (ValidationController.isValidEmail(email) && ValidationController.isValidPassword(password)){
+            authService.login(email,password);
+        }
     }
 
 }
