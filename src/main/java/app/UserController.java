@@ -23,17 +23,39 @@ public class UserController {
         if(!ValidationController.isValidName(newName)){
             return;
         }
+
+        Integer userId =isLoggedIn(token);
+        if (userId == null) {
+            return;
+        }
+
+        userService.updateName(userId,newName);
     }
 
     public void updateEmail(String token,String newEmail){
         if(!ValidationController.isValidEmail(newEmail)){
             return;
         }
+
+        Integer userId =isLoggedIn(token);
+        if (userId == null) {
+            return;
+        }
+
+        userService.updateEmail(userId,newEmail);
     }
 
     public void updatePassword(String token,String newPassword){
         if(!ValidationController.isValidPassword(newPassword)){
             return;
         }
+
+        Integer userId =isLoggedIn(token);
+        if (userId == null) {
+            return;
+        }
+
+        userService.updatePassword(userId,newPassword);
+
     }
 }

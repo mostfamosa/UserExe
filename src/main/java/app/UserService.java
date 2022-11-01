@@ -17,9 +17,19 @@ public class UserService {
         return userService;
     }
 
-    protected void updateUser(User updatedUser) {
+    protected void updateName(int userId ,String newName){
+         User oldUser = getUserById(userId);
+         if(oldUser == null){
+            return;
+         }
 
     }
 
+    protected void updateEmail(int userId ,String newEmail){
 
+    }
+
+    protected void updatePassword(int userId , String newPassword){
+
+    }
 }
