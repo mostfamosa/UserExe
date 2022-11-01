@@ -18,5 +18,9 @@ public class UserService {
         return userService;
     }
 
+    protected void updateUser(User updatedUser){
+
+    }
+
 
 }
