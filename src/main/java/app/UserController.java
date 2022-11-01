@@ -19,4 +19,21 @@ public class UserController {
         return userController;
     }
 
+    public void updateName(String token ,String newName){
+        if(!ValidationController.isValidName(newName)){
+            return;
+        }
+    }
+
+    public void updateEmail(String token,String newEmail){
+        if(!ValidationController.isValidEmail(newEmail)){
+            return;
+        }
+    }
+
+    public void updatePassword(String token,String newPassword){
+        if(!ValidationController.isValidPassword(newPassword)){
+            return;
+        }
+    }
 }

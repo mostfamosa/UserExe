@@ -7,13 +7,19 @@ public class UserService {
     private final Repo repo;
 
     private UserService() {
-        repo=Repo.getInstance();
+        repo = Repo.getInstance();
     }
 
     public static UserService getInstance() {
-        if (userService == null){
+        if (userService == null) {
             userService = new UserService();
         }
         return userService;
     }
+
+    protected void updateUser(User updatedUser) {
+
+    }
+
+
 }
