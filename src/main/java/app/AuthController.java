@@ -28,7 +28,8 @@ public class AuthController {
     }
 
     public UUID login(String email, String password){
-        if (ValidationController.isValid(email) && ValidationController.isValid(password)){
+        if (ValidationController.isValid(ValidationController.emailPat,email) &&
+                ValidationController.isValid(ValidationController.passwordPat,password)){
             return authService.login(email,password);
         }
         return new UUID(0L, 0L);

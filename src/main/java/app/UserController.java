@@ -20,7 +20,7 @@ public class UserController {
     }
 
     public void updateName(UUID token, String newName) {
-        if (!ValidationController.isValid(newName.trim())) {
+        if (!ValidationController.isValid(ValidationController.namePat,newName.trim())) {
             System.out.println("Invalid name");
             return;
         }
@@ -29,7 +29,7 @@ public class UserController {
     }
 
     public void updateEmail(UUID token, String newEmail) {
-        if (!ValidationController.isValid(newEmail.trim())) {
+        if (!ValidationController.isValid(ValidationController.emailPat,newEmail.trim())) {
             System.out.println("Invalid email");
             return;
         }
@@ -38,7 +38,7 @@ public class UserController {
     }
 
     public void updatePassword(UUID token, String newPassword) {
-        if (!ValidationController.isValid(newPassword)) {
+        if (!ValidationController.isValid(ValidationController.passwordPat,newPassword)) {
             System.out.println("Invalid password");
             return;
         }
