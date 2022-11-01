@@ -48,8 +48,8 @@ public class Repo {
 
     private void writeToFile(String filename, User content) {
         try (FileWriter writer = new FileWriter(filepath + filename)) {
-            users.put(content.getId(), content);
             gson.toJson(content, writer);
+            users.put(content.getId(), content);
         } catch (IOException e) {
             e.printStackTrace();
         }

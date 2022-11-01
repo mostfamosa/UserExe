@@ -71,9 +71,6 @@ public class AuthService {
         tokens.remove(token);
     }
 
-    private void setIdCounter(){
-        idCounter = new AtomicInteger(repo.maximumId());
-    }
-
+    private void setIdCounter(){idCounter = new AtomicInteger(repo.maximumId()+1);}
 }
 

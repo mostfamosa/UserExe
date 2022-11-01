@@ -7,17 +7,25 @@ import java.util.UUID;
 
 public class Client {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         AuthController authController = AuthController.getInstance();
         UserController userController = UserController.getInstance();
 
-        authController.createUser("moose@gmail.com", "Moose", "mmmmM14543");
 
-        //UUID token1 = authController.login("mayabarkan@gmail.com", "mmmmM111");
-        //UUID token2 = authController.login("kmxx@gmail.com","cdcd1234M");
-        //userController.deleteUser(token1);
-        //userController.deleteUser(token2);
+        authController.createUser("mostafa@gmail.com", "Moose", "Mostafa123456");
+        authController.createUser("khalid@gmail.com", "Khalid", "Khalid123456");
+        authController.createUser("maya@gmail.com", "Maya", "Maya123456");
 
+
+        UUID token1 = authController.login("khalid@gmail.com", "Khalid123456");
+        UUID token2 = authController.login("mostafa@gmail.com","Mostafa123456");
+
+        userController.updateName(token1,"KhalidWani");
+        userController.updatePassword(token1,"123456Khalid");
+        userController.updateEmail(token1,"Khalid@");
+        userController.updateEmail(token1,"Khalid@hotmail.com");
+
+        userController.deleteUser(token2);
 
     }
 }
