@@ -2,10 +2,7 @@ package app;
 
 import com.google.gson.Gson;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -42,7 +39,18 @@ public class Repo {
                 return entry.getValue();
         }
         System.out.println("User not found by id = " + id);
+
         return null;
+    }
+
+    protected void deleteUser(Integer id) {
+        users.remove(id);
+        File file = new File(filepath+id+".json");
+        if (file.delete()) {
+            System.out.println("Deleted the user(file): " + file.getName());
+        } else {
+            System.out.println("Failed to delete user(file): "+file.getName());
+        }
     }
 
     protected void saveNewUser(User user) {
