@@ -1,8 +1,6 @@
 package app;
 
-import com.google.gson.internal.Streams;
 
-import java.security.SecureRandom;
 import java.util.UUID;
 
 public class AuthController {

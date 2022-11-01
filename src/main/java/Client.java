@@ -1,8 +1,5 @@
 import app.AuthController;
 import app.AuthService;
-import app.UserController;
-import app.UserService;
-import com.google.gson.Gson;
 
 import java.util.UUID;
 

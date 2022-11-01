@@ -22,7 +22,11 @@ public class UserService {
     }
 
     protected void deleteUser(Integer id){
-        repo.deleteUser(id);
+        if (repo.deleteUser(id)) {
+            System.out.println("User deleted successfully");
+        } else {
+            System.out.println("Error: user deletion failed");
+        }
     }
 
 }
