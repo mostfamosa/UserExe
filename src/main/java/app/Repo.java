@@ -82,7 +82,4 @@ public class Repo {
 
     }
 
-    public Map<Integer, User> getUsers() {
-        return users;
-    }
 }
