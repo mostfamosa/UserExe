@@ -22,12 +22,15 @@ public class UserService {
             switch (type) {
                 case EMAIL:
                     user.setEmail(data);
+                    System.out.println("Email updated to : "+data);
                     break;
                 case PASSWORD:
                     user.setPassword(data);
+                    System.out.println("Password updated to : "+data);
                     break;
                 case NAME:
                     user.setName(data);
+                    System.out.println("Name updated to : "+data);
                     break;
                 default:
                     System.out.println("type not good");

@@ -11,7 +11,7 @@ public class ValidationController {
     public static boolean validateNewUser(String name, String password, String email) {
 
         if (!ValidationController.isValid(emailPat,email.trim())) {
-            System.out.println("Invalid password");
+            System.out.println("Invalid email");
             return false;
         }
         if (!ValidationController.isValid(namePat,name.trim())) {
@@ -19,7 +19,7 @@ public class ValidationController {
             return false;
         }
         if (!ValidationController.isValid(passwordPat,password)) {
-            System.out.println("Invalid email");
+            System.out.println("Invalid password");
             return false;
         }
         return true;
@@ -27,7 +27,6 @@ public class ValidationController {
 
     public static boolean isValid(Pattern p,String input) {
         if (!p.matcher(input).matches()) {
-            System.out.println("Invalid password");
             return false;
         }
         return true;
