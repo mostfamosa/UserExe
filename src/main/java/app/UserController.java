@@ -22,7 +22,6 @@ public class UserController {
         if(!ValidationController.isValidName(newName)){
             return;
         }
-
     }
 
     public void updateEmail(String token,String newEmail){
