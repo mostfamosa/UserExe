@@ -15,7 +15,7 @@ public class Repo {
 
 
     private static Repo repo;
-    private final Map<Integer, User> users;
+    private final Map<Integer, User> users = new HashMap<>();
     private final Gson gson;
     private final String filepath;
 
@@ -23,7 +23,6 @@ public class Repo {
     private Repo() {
         filepath = "src/main/resources/Users/";
         gson = new Gson();
-        users = loadAllUsers();
     }
 
     protected static Repo getInstance() {
@@ -36,6 +35,16 @@ public class Repo {
         return users;
     }
 
+    protected User getUserById(Integer id) {
+
+        for (Map.Entry<Integer, User> entry : users.entrySet()) {
+            if (entry.getKey() == id)
+                return entry.getValue();
+        }
+        System.out.println("User not found by id = " + id);
+        return null;
+    }
+
     protected void saveNewUser(User user) {
         writeToFile("" + user.getId() + ".json", user);
 
@@ -45,14 +54,14 @@ public class Repo {
         try (FileWriter writer = new FileWriter(filepath + filename)) {
             users.put(content.getId(), content);
             gson.toJson(content, writer);
-        } catch (FileNotFoundException e) {
-            System.out.println("file not found, new file is created");
-        } catch (IOException e) {
+        }catch (IOException e) {
             e.printStackTrace();
         }
 
     }
-    Map<Integer,User> loadAllUsers(){
+
+    //extra function
+    private Map<Integer,User> loadAllUsers(){
 
         for (Map.Entry<Integer,User> entry : users.entrySet()){
             users.put(entry.getKey(),readFromFile(entry.getKey()+".json"));
@@ -76,9 +85,7 @@ public class Repo {
         try (FileWriter writer = new FileWriter(filepath + user.getId()+".json")) {
             gson.toJson(user, writer);
             users.put(user.getId(), user);
-        } catch (FileNotFoundException e) {
-            System.out.println("file not found, new file is created");
-        } catch (IOException e) {
+        }catch (IOException e) {
             e.printStackTrace();
         }
 
