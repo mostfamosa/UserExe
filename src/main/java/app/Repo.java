@@ -20,19 +20,22 @@ public class Repo {
 
 
     private Repo() {
-        users = new HashMap<>();
         filepath = "src/main/resources/Users/";
         gson = new Gson();
+        users = loadAllUsers();
     }
 
-    public static Repo getInstance() {
+    protected static Repo getInstance() {
         if (repo == null) {
             repo = new Repo();
         }
         return repo;
     }
+    protected Map<Integer, User> getUsers() {
+        return users;
+    }
 
-    public void saveNewUser(User user) {
+    protected void saveNewUser(User user) {
         writeToFile("" + user.getId() + ".json", user);
 
     }
@@ -68,7 +71,7 @@ public class Repo {
         return null;
     }
 
-    public void updateUser(User user) {
+    protected void updateUser(User user) {
         try (FileWriter writer = new FileWriter(filepath + user.getId()+".json")) {
             gson.toJson(user, writer);
             users.put(user.getId(), user);
