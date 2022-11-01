@@ -2,13 +2,8 @@ package app;
 
 import com.google.gson.Gson;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
+import java.io.*;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Repo {
@@ -31,18 +26,23 @@ public class Repo {
         }
         return repo;
     }
+
     protected Map<Integer, User> getUsers() {
         return users;
     }
 
     protected User getUserById(Integer id) {
+        return users.get(id);
+    }
 
-        for (Map.Entry<Integer, User> entry : users.entrySet()) {
-            if (entry.getKey() == id)
-                return entry.getValue();
+    protected boolean deleteUser(Integer id) {
+        users.remove(id);
+        File file = new File(filepath + id + ".json");
+        if (file.delete()) {
+            return true;
+        } else {
+            return false;
         }
-        System.out.println("User not found by id = " + id);
-        return null;
     }
 
     protected void saveNewUser(User user) {
@@ -54,38 +54,38 @@ public class Repo {
         try (FileWriter writer = new FileWriter(filepath + filename)) {
             users.put(content.getId(), content);
             gson.toJson(content, writer);
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
 
     //extra function
-    private Map<Integer,User> loadAllUsers(){
+    private Map<Integer, User> loadAllUsers() {
 
-        for (Map.Entry<Integer,User> entry : users.entrySet()){
-            users.put(entry.getKey(),readFromFile(entry.getKey()+".json"));
+        for (Map.Entry<Integer, User> entry : users.entrySet()) {
+            users.put(entry.getKey(), readFromFile(entry.getKey() + ".json"));
         }
         return users;
     }
 
     private User readFromFile(String fileName) {
-        try(FileReader reader = new FileReader(filepath+fileName)) {
-            User u = gson.fromJson(reader,User.class);
+        try (FileReader reader = new FileReader(filepath + fileName)) {
+            User u = gson.fromJson(reader, User.class);
             reader.close();
             return u;
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
 
     protected void updateUser(User user) {
-        try (FileWriter writer = new FileWriter(filepath + user.getId()+".json")) {
+        try (FileWriter writer = new FileWriter(filepath + user.getId() + ".json")) {
             gson.toJson(user, writer);
             users.put(user.getId(), user);
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
