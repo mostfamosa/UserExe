@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Repo {
 
-    private File[] files;
+    private final File[] files;
     private static Repo repo;
     private Map<Integer, User> users = new HashMap<>();
     private final Gson gson;

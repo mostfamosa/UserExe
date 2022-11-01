@@ -11,7 +11,7 @@ public class Client {
         AuthController authController = AuthController.getInstance();
         UserController userController = UserController.getInstance();
 
-        authController.createUser("maya2@gmail.com", "Maya", "mmmmM111");
+        authController.createUser("moose@gmail.com", "Moose", "mmmmM14543");
 
         //UUID token1 = authController.login("mayabarkan@gmail.com", "mmmmM111");
         //UUID token2 = authController.login("kmxx@gmail.com","cdcd1234M");

@@ -16,16 +16,32 @@ public class UserService {
         return userService;
     }
 
-    protected void updateUser(User updatedUser) {
-
+    protected void update(int userId, String data, InputsTypes type) {
+        User user = repo.getUserById(userId);
+        if (user != null) {
+            switch (type) {
+                case EMAIL:
+                    user.setEmail(data);
+                    break;
+                case PASSWORD:
+                    user.setPassword(data);
+                    break;
+                case NAME:
+                    user.setName(data);
+                    break;
+                default:
+                    System.out.println("type not good");
+                    return;
+            }
+        }
+        repo.updateUser(user);
     }
 
-    protected void deleteUser(Integer id){
+    protected void deleteUser(Integer id) {
         if (repo.deleteUser(id)) {
             System.out.println("User deleted successfully");
         } else {
             System.out.println("Error: user deletion failed");
         }
     }
-
 }
