@@ -21,5 +21,8 @@ public class UserService {
 
     }
 
+    protected void deleteUser(Integer id){
+        repo.deleteUser(id);
+    }
 
 }

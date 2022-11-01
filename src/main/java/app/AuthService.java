@@ -40,16 +40,20 @@ public class AuthService {
         return tokens.get(token);
     }
 
-
-    protected void login(String email, String password) {
+    protected UUID login(String email, String password) {
         Optional<User> user = validLoginCredentials(email, password);
+        UUID token;
+
         if(user.isPresent()){
-            UUID token = UUID.randomUUID();
+            token = UUID.randomUUID();
             tokens.put(token , user.get().getId());
             System.out.println(user.get() + " Is logged in ");
         } else {
+            token = new UUID(0L, 0L);
             System.out.println("Error: No such registered user with this credentials");
         }
+
+        return token;
     }
 
     private boolean emailExists(String email) {
@@ -58,6 +62,10 @@ public class AuthService {
 
     private Optional<User> validLoginCredentials(String email, String password){
         return repo.getUsers().values().stream().filter(user -> user.getEmail().equals(email) && user.getPassword().equals(password)).findFirst();
+    }
+
+    protected void removeToken(UUID token){
+        tokens.remove(token);
     }
 
 }

@@ -25,16 +25,16 @@ public class AuthController {
 
     public void createUser(String email, String name, String password) {
 
-        if (!ValidationController.validateNewUser(name, password, email)) {
-            return;
+        if (ValidationController.validateNewUser(name, password, email)) {
+            authService.createUser(email, name, password);
         }
-        authService.createUser(email, name, password);
     }
 
     public UUID login(String email, String password){
         if (ValidationController.isValidEmail(email) && ValidationController.isValidPassword(password)){
-            authService.login(email,password);
+            return authService.login(email,password);
         }
+        return new UUID(0L, 0L);
     }
 
 }
