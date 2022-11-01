@@ -32,11 +32,14 @@ public class AuthService {
         }
     }
 
-    protected User isLoggedIn(UUID token){
-        return tokens.get(token);
+    protected boolean isLoggedIn(UUID token){
+        return tokens.containsKey(token);
     }
 
-    protected void login(String email, String password){
+    protected void login(String email, String password) {
+        if(validLoginCredentials(email, password)){
+            
+        }
 
     }
 
@@ -44,6 +47,13 @@ public class AuthService {
     private boolean emailExists(String email) {
         return repo.getUsers().values().stream().anyMatch(user -> user.getEmail().equals(email));
     }
+
+    private boolean validLoginCredentials(String email, String password){
+        return repo.getUsers().values().stream().anyMatch(User :: emailPasswordMatch);
+    }
+
+
+
 
 
 }

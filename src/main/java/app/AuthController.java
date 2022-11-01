@@ -29,7 +29,7 @@ public class AuthController {
     }
 
     public void login(String email, String password){
-
+        authService.login(email,password);
     }
 
 }

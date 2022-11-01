@@ -67,4 +67,8 @@ class User {
                 ", password='" + password + '\'' +
                 '}';
     }
+
+    protected boolean emailPasswordMatch(String email, String password){
+        return this.getEmail().equals(email) && this.getPassword().equals(password);
+    }
 }
