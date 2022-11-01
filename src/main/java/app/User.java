@@ -1,7 +1,6 @@
 package app;
 
 import java.util.Objects;
-import java.util.concurrent.atomic.AtomicInteger;
 
 class User {
 
@@ -16,8 +15,6 @@ class User {
         this.password = password;
         this.id = id;
     }
-
-
 
     protected String getName() {
         return name;

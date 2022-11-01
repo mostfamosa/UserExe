@@ -2,7 +2,6 @@ package app;
 
 public class UserService {
 
-
     private static UserService userService;
     private final Repo repo;
 
