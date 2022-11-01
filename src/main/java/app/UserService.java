@@ -2,7 +2,6 @@ package app;
 
 public class UserService {
 
-
     private static UserService userService;
     private final Repo repo;
 
@@ -36,5 +35,13 @@ public class UserService {
             }
         }
         repo.updateUser(user);
+    }
+
+    protected void deleteUser(Integer id) {
+        if (repo.deleteUser(id)) {
+            System.out.println("User deleted successfully");
+        } else {
+            System.out.println("Error: user deletion failed");
+        }
     }
 }
