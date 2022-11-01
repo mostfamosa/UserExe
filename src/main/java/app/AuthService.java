@@ -4,16 +4,19 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class AuthService {
 
     private static AuthService authService;
     private final Repo repo;
     private final Map<UUID, Integer> tokens;
+    private static AtomicInteger idCounter;
 
     private AuthService() {
         repo = Repo.getInstance();
         tokens = new HashMap<>();
+        setIdCounter();
     }
 
     public static AuthService getInstance() {
@@ -27,7 +30,7 @@ public class AuthService {
         if (emailExists(email)) {
             System.out.println("Error: This email already exists");
         } else {
-            User user = new User(email, name, password);
+            User user = new User(email, name, password, idCounter.getAndIncrement());
             repo.saveNewUser(user);
         }
     }
@@ -66,6 +69,10 @@ public class AuthService {
 
     protected void removeToken(UUID token){
         tokens.remove(token);
+    }
+
+    private void setIdCounter(){
+        idCounter = new AtomicInteger(repo.maximumId());
     }
 
 }

@@ -6,21 +6,18 @@ import java.util.concurrent.atomic.AtomicInteger;
 class User {
 
     private final int id;
-    private static final AtomicInteger idCounter = new AtomicInteger();
     private  String email;
     private String name;
     private String password;
 
-    User(String email, String name, String password) {
+    User(String email, String name, String password, int id) {
         this.email = email;
         this.name = name;
         this.password = password;
-        this.id = createID();
+        this.id = id;
     }
 
-    private static int createID() {
-        return idCounter.getAndIncrement();
-    }
+
 
     protected String getName() {
         return name;
