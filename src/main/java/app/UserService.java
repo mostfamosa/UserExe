@@ -17,19 +17,24 @@ public class UserService {
         return userService;
     }
 
-    protected void updateName(int userId ,String newName){
-         User oldUser = getUserById(userId);
-         if(oldUser == null){
-            return;
-         }
-
-    }
-
-    protected void updateEmail(int userId ,String newEmail){
-
-    }
-
-    protected void updatePassword(int userId , String newPassword){
-
+    protected void update(int userId, String data, InputsTypes type) {
+        User user = repo.getUserById(userId);
+        if (user != null) {
+            switch (type) {
+                case EMAIL:
+                    user.setEmail(data);
+                    break;
+                case PASSWORD:
+                    user.setPassword(data);
+                    break;
+                case NAME:
+                    user.setName(data);
+                    break;
+                default:
+                    System.out.println("type not good");
+                    return;
+            }
+        }
+        repo.updateUser(user);
     }
 }

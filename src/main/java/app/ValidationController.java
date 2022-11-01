@@ -10,39 +10,24 @@ public class ValidationController {
 
     public static boolean validateNewUser(String name, String password, String email) {
 
-        if (!ValidationController.isValidEmail(email)) {
-            System.out.println("Invalid email");
-            return false;
-        }
-        if (!ValidationController.isValidName(name)) {
-            System.out.println("Invalid name");
-            return false;
-        }
-        if (!ValidationController.isValidPassword(password)) {
-            return false;
-        }
-        return true;
-    }
-
-    public static boolean isValidPassword(String password) {
-        if (!passwordPat.matcher(password).matches()) {
+        if (!ValidationController.isValid(email.trim())) {
             System.out.println("Invalid password");
             return false;
         }
-        return true;
-    }
-
-    public static boolean isValidName(String name) {
-        if (!namePat.matcher(name).matches()) {
+        if (!ValidationController.isValid(name.trim())) {
             System.out.println("Invalid name");
+            return false;
+        }
+        if (!ValidationController.isValid(password)) {
+            System.out.println("Invalid email");
             return false;
         }
         return true;
     }
 
-    public static boolean isValidEmail(String email) {
-        if (!emailPat.matcher(email).matches()) {
-            System.out.println("Invalid email");
+    public static boolean isValid(String input) {
+        if (!passwordPat.matcher(input).matches()) {
+            System.out.println("Invalid password");
             return false;
         }
         return true;
