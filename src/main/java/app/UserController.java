@@ -37,4 +37,12 @@ public class UserController {
             return;
         }
     }
+
+    public void deleteUser(UUID token){
+        Integer id = authService.isLoggedIn(token);
+        if (id != null){
+            authService.removeToken(token);
+            userService.deleteUser(id);
+        }
+    }
 }

@@ -85,4 +85,8 @@ public class Repo {
         }
     }
 
+    protected int maximumId(){
+        return users.keySet().stream().max(Integer::compareTo).orElse(0);
+    }
+
 }
