@@ -11,19 +11,19 @@ public class AuthService {
     private final Map<UUID, User> tokens;
 
     private AuthService() {
-        repo =Repo.getInstance();
+        repo = Repo.getInstance();
         tokens = new HashMap<>();
     }
 
     public static AuthService getInstance() {
-        if (authService == null){
+        if (authService == null) {
             authService = new AuthService();
         }
         return authService;
     }
 
 
-    protected void createUser(String email, String name, String password){
+    protected void createUser(String email, String name, String password) {
         if (emailExists(email)) {
             System.out.println("This email already exists");
         } else {
@@ -40,7 +40,6 @@ public class AuthService {
         if(validLoginCredentials(email, password)){
             
         }
-
     }
 
     //edit this function
@@ -52,8 +51,5 @@ public class AuthService {
         return repo.getUsers().values().stream().anyMatch(User :: emailPasswordMatch);
     }
 
-
-
-
-
 }
+
