@@ -1,5 +1,8 @@
 package app;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -7,6 +10,7 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class AuthService {
+    private static Logger logger = LogManager.getLogger(AuthService.class.getName());
 
     private static AuthService authService;
     private final Repo repo;
@@ -27,6 +31,7 @@ public class AuthService {
     }
 
     protected void createUser(String email, String name, String password) {
+
         if (emailExists(email)) {
             System.out.println("Error: This email already exists");
         } else {

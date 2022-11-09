@@ -1,0 +1,25 @@
+2022-11-09 14:32:32,432 FATAL   app.Repo - loadAllUsers: java.lang.NullPointerException
+2022-11-09 14:37:30,927 TRACE   app.Repo - You are trying to add new user to REPO
+2022-11-09 14:37:30,933 WARN    app.Repo - You are trying to write data of a user to a file
+2022-11-09 14:37:30,935 INFO    app.Repo - You added new user Successfully
+2022-11-09 14:37:30,936 TRACE   app.Repo - You are trying to add new user to REPO
+2022-11-09 14:37:30,937 WARN    app.Repo - You are trying to write data of a user to a file
+2022-11-09 14:37:30,937 INFO    app.Repo - You added new user Successfully
+2022-11-09 14:37:31,192 ERROR   app.UserController - You are trying to update an invalid Name
+2022-11-09 14:37:31,201 INFO    app.UserController - You updated the name Successfully
+2022-11-09 14:37:31,202 INFO    app.UserController - You updated the password Successfully
+2022-11-09 14:37:31,202 ERROR   app.UserController - You are trying to update an invalid password
+2022-11-09 14:37:31,203 ERROR   app.UserController - You are trying to update an invalid Email
+2022-11-09 14:42:23,172 TRACE   app.Repo - You are trying to add new user to REPO
+2022-11-09 14:42:23,177 WARN    app.Repo - You are trying to write data of a user to a file
+2022-11-09 14:42:23,180 INFO    app.Repo - You added new user Successfully
+2022-11-09 14:42:23,181 TRACE   app.Repo - You are trying to add new user to REPO
+2022-11-09 14:42:23,182 WARN    app.Repo - You are trying to write data of a user to a file
+2022-11-09 14:42:23,182 INFO    app.Repo - You added new user Successfully
+2022-11-09 14:42:23,460 ERROR   app.UserController - You are trying to update an invalid Name
+2022-11-09 14:42:23,475 INFO    app.UserController - You updated the name Successfully
+2022-11-09 14:42:23,476 INFO    app.UserController - You updated the password Successfully
+2022-11-09 14:42:23,476 ERROR   app.UserController - You are trying to update an invalid password
+2022-11-09 14:42:23,476 ERROR   app.UserController - You are trying to update an invalid Email
+2022-11-09 14:46:58,754 FATAL   app.Repo - readFromFile: java.io.FileNotFoundException: src\main\resources\User\11.json (The system cannot find the path specified)
+2022-11-09 14:46:58,764 FATAL   app.Repo - loadAllUsers: java.lang.NullPointerException

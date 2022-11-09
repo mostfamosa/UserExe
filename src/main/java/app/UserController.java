@@ -1,8 +1,13 @@
 package app;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.UUID;
 
 public class UserController {
+    private static Logger logger = LogManager.getLogger(UserController.class.getName());
+
     private static UserController userController;
     private final AuthService authService;
     private final UserService userService;
@@ -10,6 +15,7 @@ public class UserController {
     private UserController() {
         authService = AuthService.getInstance();
         userService = UserService.getInstance();
+
     }
 
     public static UserController getInstance() {
@@ -21,15 +27,18 @@ public class UserController {
 
     public void updateName(UUID token, String newName) {
         if (!ValidationController.isValid(ValidationController.namePat,newName.trim())) {
+            logger.error("You are trying to update an invalid Name");
             System.out.println("Invalid name");
             return;
         }
         auth(token,newName,InputsTypes.NAME);
+        logger.info("You updated the name Successfully");
 
     }
 
     public void updateEmail(UUID token, String newEmail) {
         if (!ValidationController.isValid(ValidationController.emailPat,newEmail.trim())) {
+            logger.error("You are trying to update an invalid Email");
             System.out.println("Invalid email");
             return;
         }
@@ -39,10 +48,12 @@ public class UserController {
 
     public void updatePassword(UUID token, String newPassword) {
         if (!ValidationController.isValid(ValidationController.passwordPat,newPassword)) {
+            logger.error("You are trying to update an invalid password");
             System.out.println("Invalid password");
             return;
         }
         auth(token,newPassword,InputsTypes.PASSWORD);
+        logger.info("You updated the password Successfully");
     }
 
     private void auth(UUID token,String data,InputsTypes type){
